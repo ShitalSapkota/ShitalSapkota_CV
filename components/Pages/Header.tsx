@@ -25,7 +25,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-    { href: "#hero", label: "Home", icon: Home },
+    { href: "/", label: "Home", icon: Home },
     { href: "#about", label: "About", icon: User },
     { href: "#resume", label: "Resume", icon: FileText },
     { href: "#portfolio", label: "Portfolio", icon: Briefcase },
@@ -86,7 +86,7 @@ export default function Header() {
                     {/* Social links */}
                     <div className="mt-4 flex gap-4">
                         <Link
-                            href="https://linkedin.com"
+                            href="https://linkedin.com/in/shitalsapkota"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-muted-foreground transition-colors hover:text-primary"
@@ -95,7 +95,7 @@ export default function Header() {
                         </Link>
 
                         <Link
-                            href="https://github.com"
+                            href="https://github.com/shitalsapkota"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-muted-foreground transition-colors hover:text-primary"

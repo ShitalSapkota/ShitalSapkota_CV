@@ -1,6 +1,8 @@
 import About from "@/components/Pages/About";
 import Skills from "@/components/Pages/Skills";
 import Hero from "@/components/Pages/Hero";
+import Resume from "@/components/Pages/Resume";
+import Portfolio from "@/components/Pages/Portfolio";
 
 export default function HomePage() {
   return (
@@ -9,6 +11,9 @@ export default function HomePage() {
       <Hero />
       <About />
       <Skills />
+      <Resume />
+      <Portfolio />
+
     </>
   );
 }

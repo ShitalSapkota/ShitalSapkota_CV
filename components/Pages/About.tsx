@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -15,13 +16,20 @@ export default function About() {
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
 
           {/* Image */}
-
+          <div className="relative w-full overflow-hidden rounded-2xl border shadow-lg lg:col-start-1 lg:col-end-3">
+            <Image
+              src="/LinkedIncoverimg.png"
+              alt="Shital Sapkota"
+              fill
+              className="object-cover"
+            />
+          </div>
 
           {/* Info */}
-          <Card className="md:col-span-2">
+          <Card className="lg:col-start-3 lg:col-end-5">
             <CardContent className="p-6 space-y-6">
               <h3 className="text-2xl font-semibold">
                 Full Stack Developer
@@ -34,12 +42,12 @@ export default function About() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                 <div>
-                  <p><span className="font-medium">Location:</span> Helsinki, Finland</p>
-                  <p><span className="font-medium">Degree:</span> Full Stack Development</p>
+                  <p><span className="font-medium">Location:</span> Turku, Finland</p>
+                  <p><span className="font-medium">Phone:</span> +358413120457</p>
                 </div>
                 <div>
-                  <p><span className="font-medium">Email:</span> you@example.com</p>
-                  <p><span className="font-medium">Freelance:</span> Available</p>
+                  <p><span className="font-medium">Email:</span> shital.sapkota1@gmail.com</p>
+                  <p><span className="font-medium">Job:</span> On-site / Remote available</p>
                 </div>
               </div>
             </CardContent>
