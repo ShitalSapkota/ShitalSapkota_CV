@@ -32,7 +32,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 └── tailwind.config.ts # Tailwind CSS configuration
 ```
 
-## ⚙️ Getting Started
+## ⚙️ Getting Started..
 
 ### Prerequisites
 
