@@ -34,9 +34,9 @@ A professional, high-performance, and fully responsive portfolio website built w
 
 To evolve this portfolio into a full-scale production application, the following enhancements are planned:
 
-### 1. Robust Backend & API Architecture
-- **NestJS Integration**: Transitioning from a static site to a dynamic one by integrating a **NestJS** backend for enterprise-grade scalability and modular architecture.
-- **Advanced API Routes**: Leveraging **Next.js API Routes** (Edge Runtime) to handle server-side logic, form processing, and third-party integrations with high performance.
+### 1. Next.js Backend Integration
+- **Next.js Backend for Frontend**: Transitioning from a static site to a dynamic one by integrating **Next.js API Routes** and **Server Actions** for a unified frontend and backend experience.
+- **Advanced API Architecture**: Leveraging **Edge Runtime** to handle server-side logic, form processing, and third-party integrations with high performance.
 
 ### 2. Data Persistence & Management
 - **Database Integration**: Implementing **PostgreSQL** or **MongoDB** using **Prisma ORM** to store project data, blog posts, and contact inquiries.
