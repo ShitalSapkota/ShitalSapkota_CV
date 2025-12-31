@@ -11,6 +11,7 @@ import {
     Mail,
     Menu,
     X,
+    Code2,
     LucideIcon,
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -27,6 +28,7 @@ interface NavItem {
 const navItems: NavItem[] = [
     { href: "/", label: "Home", icon: Home },
     { href: "#about", label: "About", icon: User },
+    { href: "#skills", label: "Skills", icon: Code2 },
     { href: "#resume", label: "Resume", icon: FileText },
     { href: "#portfolio", label: "Portfolio", icon: Briefcase },
     { href: "#contact", label: "Contact", icon: Mail },

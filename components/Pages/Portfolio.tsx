@@ -22,13 +22,13 @@ const projects: Project[] = [
     github: "https://github.com/shitalsapkota",
   },
   {
-    title: "E-commerce Platform(lorem)",
+    title: "E-commerce Platform",
     description: "A full-featured online store with product management and checkout.",
     image: "/LinkedIncoverimg.png", // Using existing image as placeholder
     tags: ["React", "Node.js", "MongoDB"],
   },
   {
-    title: "Task Management App(lorem)",
+    title: "Task Management App",
     description: "A productivity tool for organizing tasks and tracking progress.",
     image: "/LinkedIncoverimg.png", // Using existing image as placeholder
     tags: ["React", "Firebase", "Material UI"],
@@ -54,6 +54,7 @@ export default function Portfolio() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
                 />
               </div>
