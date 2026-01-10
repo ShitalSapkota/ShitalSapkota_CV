@@ -94,15 +94,15 @@ export default function Resume() {
                             <Card>
                                 <CardHeader>
                                     <CardTitle className="text-base">
-                                        Frontend / Full Stack Developer
+                                        Frontend / Full Stack Developer - Internship
                                     </CardTitle>
                                     <p className="text-sm text-muted-foreground">
-                                        2024 – Present
+                                        Aug, 2025 – Present
                                     </p>
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-sm italic">
-                                        Freelance, Turku, Finland
+                                        Resimator OY, Turku, Finland
                                     </p>
                                     <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
                                         <li>
@@ -112,10 +112,6 @@ export default function Resume() {
                                         <li>
                                             Integrating REST APIs and handling application state
                                             efficiently.
-                                        </li>
-                                        <li>
-                                            Collaborating with clients to deliver high-quality,
-                                            production-ready web applications.
                                         </li>
                                     </ul>
                                 </CardContent>

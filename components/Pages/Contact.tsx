@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
+import { ContactFormSchema, type ContactFormData } from "@/lib/ContactFormSchema";
+import { submitContactForm } from "@/app/api/contact/contact";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,15 +12,6 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Phone, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-
-const contactFormSchema = z.object({
-    name: z.string().min(2, "Name must be at least 2 characters."),
-    email: z.email("Please enter a valid email address."),
-    subject: z.string().min(5, "Subject must be at least 5 characters."),
-    message: z.string().min(10, "Message must be at least 10 characters."),
-});
-
-type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -29,8 +21,8 @@ export default function Contact() {
         handleSubmit,
         reset,
         formState: { errors },
-    } = useForm<ContactFormValues>({
-        resolver: zodResolver(contactFormSchema),
+    } = useForm<ContactFormData>({
+        resolver: zodResolver(ContactFormSchema),
         defaultValues: {
             name: "",
             email: "",
@@ -39,14 +31,24 @@ export default function Contact() {
         },
     });
 
-    const onSubmit = async (data: ContactFormValues) => {
+    const onSubmit = async (data: ContactFormData) => {
         setIsSubmitting(true);
         try {
-            // Simulate API call
-            await new Promise((resolve) => setTimeout(resolve, 1500));
-            console.log("Form submitted:", data);
-            toast.success("Message sent successfully! I'll get back to you soon.");
-            reset();
+            const result = await submitContactForm(data);
+            
+            if (result.success) {
+                toast.success(result.message || "Message sent successfully!");
+                reset();
+            } else {
+                if (result.error) {
+                    // Handle field-level errors if any
+                    Object.entries(result.error).forEach(([key, value]) => {
+                        toast.error(`${key}: ${value.join(", ")}`);
+                    });
+                } else {
+                    toast.error(result.message || "Failed to send message. Please try again.");
+                }
+            }
         } catch (error) {
             console.error("Submission error:", error);
             toast.error("Something went wrong. Please try again later.");
