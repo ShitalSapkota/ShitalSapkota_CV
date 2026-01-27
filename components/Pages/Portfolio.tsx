@@ -19,19 +19,23 @@ const projects: Project[] = [
     description: "A modern, responsive portfolio built with Next.js and Tailwind CSS.",
     image: "/LinkedIncoverimg.png", // Using existing image as placeholder
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/shitalsapkota",
+    github: "https://github.com/ShitalSapkota/shitalsapkota_cv",
   },
   {
-    title: "E-commerce Platform",
-    description: "A full-featured online store with product management and checkout.",
+    title: "Online Store",
+    description: "A simple API calling online store with product management and checkout.",
     image: "/LinkedIncoverimg.png", // Using existing image as placeholder
-    tags: ["React", "Node.js", "MongoDB"],
+    tags: ["React", "Node.js"],
+    github: "https://github.com/ShitalSapkota/React_app_Redux",
+    link: "https://react-app-redux-nine.vercel.app/",
   },
   {
-    title: "Task Management App",
-    description: "A productivity tool for organizing tasks and tracking progress.",
+    title: "Kinetic Orb Studio",
+    description: "Simple HTML elements become premium, interactive UI through advanced CSS animations and lighting.",
     image: "/LinkedIncoverimg.png", // Using existing image as placeholder
-    tags: ["React", "Firebase", "Material UI"],
+    tags: ["HTML", "CSS"],
+    github: "https://github.com/ShitalSapkota/Kinetic_Orb_Studio",
+    link: "https://kinetic-orb-studio.vercel.app/",
   },
 ];
 
