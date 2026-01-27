@@ -91,31 +91,6 @@ export default function Resume() {
                         </h3>
 
                         <div className="space-y-6">
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle className="text-base">
-                                        Frontend / Full Stack Developer - Internship
-                                    </CardTitle>
-                                    <p className="text-sm text-muted-foreground">
-                                        Aug, 2025 – Present
-                                    </p>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm italic">
-                                        Resimator OY, Turku, Finland
-                                    </p>
-                                    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-muted-foreground">
-                                        <li>
-                                            Building responsive and accessible UI components using React,
-                                            Next.js, and Tailwind CSS.
-                                        </li>
-                                        <li>
-                                            Integrating REST APIs and handling application state
-                                            efficiently.
-                                        </li>
-                                    </ul>
-                                </CardContent>
-                            </Card>
 
                             <Separator />
 
